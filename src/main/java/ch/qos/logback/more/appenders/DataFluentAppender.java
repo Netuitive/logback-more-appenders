@@ -60,13 +60,7 @@ public class DataFluentAppender extends UnsynchronizedAppenderBase<ILoggingEvent
 
         @Override
         protected void close() {
-            try {
-                super.close();
-            } finally {
-                if (fluentLogger != null) {
-                    fluentLogger.close();
-                }
-            }
+            // noop
         }
 
         @Override
